@@ -1,55 +1,79 @@
-var friendData = require("../data/friends.js");
+var friends = require('../data/friends.js');
 
-var currentcompare = [];
-var comparenumbers = [];
-
-function difference(a, b) {
-  return Math.abs(a - b);
-}
-
-function findSmallest(arr) {
-  var index = 0;
-  var value = arr[0];
-  for (var i = 1; i < arr.length; i++) {
-    if (arr[i] < value) {
-      value = arr[i];
-      index = i;
-    }
-  }
-  return index;
-  console.log("value: " + value + " " + "index: " + index);
-}
-
-arrSum = function (arr) {
-  return arr.reduce(function (a, b) {
-    return a + b
-  }, 0);
-}
-
+//API Routes
 module.exports = function (app) {
+    //GET Request - this URL gets table data and displays in JSON
+    app.get('/api/friends', function (req, res) {
+        res.json(friends);
+    });
 
-  app.post("/api/friends", function (req, res) {
+    //POST Request
+    app.post('/api/friends', function (req, res) {
 
-    comparenumbers = [];
-    for (let i = 0; i < friendData.length; i++) {
-      currentcompare = [];
-      var currentfriend = friendData[i].scores;
-      for (let i = 0; i < currentfriend.length; i++) {
-        currentcompare.push(difference(Number(currentfriend[i]), Number(req.body.scores[i])))
+        //Comparing user with their best friend match 
+        var totalDifference = 0;
+        //Object to hold the best match
+        var bestMatch = {
+            name: "",
+            photo: "",
+            friendDifference: 1000
+        };
 
-      }
-      comparenumbers.push(arrSum(currentcompare));
+        //Take the result of the user's survey POST and parse it.
+        var userData = req.body;
+        var userName = userData.name;
+        var userScores = userData.scores;
+        // Parse Int converts the users score to a number 
+        var b = userScores.map(function (item) {
+            return parseInt(item, 10);
+        });
+        userData = {
+            name: req.body.name,
+            photo: req.body.photo,
+            scores: b
+        }
 
-    }
-    findSmallest(comparenumbers)
-    console.log(comparenumbers)
-    friendData.push(req.body);
-    res.json(friendData[findSmallest(comparenumbers)]);
-  });
+        console.log("Name: " + userName);
+        console.log("User Score " + userScores);
 
-  app.post("/api/clear", function (req, res) {
-    friendData.length = [];
+        //Adds up all the numbers to determine score
+        var sum = b.reduce((a, b) => a + b, 0);
 
-    res.json({ ok: true });
-  });
+        console.log("Total sum " + sum);
+        console.log("Match Difference " + bestMatch.friendDifference);
+        console.log("+---------------------------------+");
+
+        // Loop to go through all friends
+        for (var i = 0; i < friends.length; i++) {
+            console.log(friends[i].name);
+            totalDifference = 0;
+            console.log("Total " + totalDifference);
+            console.log("Love Match Difference " + bestMatch.friendDifference);
+
+            var bfriendScore = friends[i].scores.reduce((a, b) => a + b, 0);
+            console.log("Total match score " + bfriendScore);
+            totalDifference += Math.abs(sum - bfriendScore);
+            console.log(" ===> " + totalDifference);
+
+            if (totalDifference <= bestMatch.friendDifference) {
+
+                // Reset the bestMatch to be the new friend. 
+                bestMatch.name = friends[i].name;
+                bestMatch.photo = friends[i].photo;
+                bestMatch.friendDifference = totalDifference;
+                // }
+
+            }
+            console.log(totalDifference + " Total Difference");
+
+        }
+        console.log(bestMatch);
+
+
+        friends.push(userData);
+        console.log("New User added!");
+        console.log(userData);
+
+        res.json(bestMatch);
+    });
 };

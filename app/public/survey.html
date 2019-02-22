@@ -3,224 +3,233 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>FriendFinder</title>
-
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    <!-- Icons style sheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>FF Survey</title>
 </head>
 
 <body>
-
-    <div class="container">
-        <h2>return home</h2>
+    <div class="jumbotron m-5">
+        <h1 class="text-center">Friend <span class="fa fa-heart" aria-hidden="true"></span> Finder</h1>
+        <p class="lead"></p>
+        <hr class="my-4">
+        <p class="text-center">Take our survey to find your match
+        </p>
+        <p class="text-center">
             <a class="btn btn-primary btn-lg" href="./home.html" role="button">
                 <span class="fa fa-home" aria-hidden="true"></span></a>
-            <form class="m-5">
-                    <div class="form-group">
-                        <h2>ABOUT YOU</h2>
-                        <label for="exampleFormControlInput1">Full Name</label>
-                        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Link to Photo Image (Required)</h4>
-                            <input type="text" name="" id="photo" class="form-control" placeholder="http://example.com/ex.jpg"
-                                required>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Pineapple goes with pizza</label>
-                        <select class="form-control" id="q1">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">I love the beach</label>
-                        <select class="form-control" id="q2">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">I would rather stay in than go out</label>
-                        <select class="form-control" id="q3">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">I like chill music more than trap</label>
-                        <select class="form-control" id="q4">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">I love movie nights</label>
-                        <select class="form-control" id="q5">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">I'm a heavy drinker</label>
-                        <select class="form-control" id="q6">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">I am serious about school</label>
-                        <select class="form-control" id="q7">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">I am democratic</label>
-                        <select class="form-control" id="q8">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">I am a dog person</label>
-                        <select class="form-control" id="q9">
-                            <option value=""></option>
-                            <option value="1">1 (Strongly Disagree)</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5" selected>5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">I like going to clubs</label>
-                        <select class="form-control" id="q10">
-                            <option value=""></option>
-                            <option value="1" selected>1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-
-        <!-- Submit Button -->
-        <button type="button" class="btn btn-danger btn-lg mt-3" id="submit"><span class="fa fa-heart" aria-hidden="true"></span>
-            FIND YOUR NEW BEST FRIEND</button>
-
-        <hr>
-
+        </p>
     </div>
-    <footer class="footer">
-        <div class="container">
-
+    <form class="m-5">
+        <h2>ABOUT YOU</h2>
+        <label for="exampleFormControlInput1">Full Name</label>
+        <input type="name" class="form-control mb-3" id="name" placeholder="Full Name" required>
         </div>
-    </footer>
+        <label for="exampleFormControlInput1">Link to Photo Image (Required)</h4>
+            <input type="text" name="" id="photo" class="form-control mb-3" placeholder="http://example.com/ex.jpg"
+                required>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">A hotdog is not a sandwich</label>
+                <select class="chosen-one" id="q1">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">I am a fan of the Harry Potter book series</label>
+                <select class="chosen-one" id="q2">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">I am a dog person</label>
+                <select class="chosen-one" id="q3">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">I like to eat pizza</label>
+                <select class="chosen-one" id="q4">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">I like to go to the beach</label>
+                <select class="chosen-one" id="q5">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">I like to drink whiskey</label>
+                <select class="chosen-one" id="q6">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">I use semi-colons in JavaScript</label>
+                <select class="chosen-one" id="q7">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">I agree with Kanye West still</label>
+                <select class="chosen-one" id="q8">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">I like the Roboto font</label>
+                <select class="chosen-one" id="q9">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5 (Strongly Agree)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Rick and Morty Forever 100 years</label>
+                <select class="chosen-one" id="q10">
+                    <option value=""></option>
+                    <option value="1" selected>1 (I have no clue what you are talking about)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Binging until the next season)</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-danger btn-lg mt-3" id="submit"><span class="fa fa-heart" aria-hidden="true"></span>
+                FIND LOVE</button>
+            </p>
+            </div>
+    </form>
+    </div>
 
+    <!-- Results Modal-->
+    <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Results content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;</button>
+                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                </div>
 
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
-        crossorigin="anonymous"></script>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <img id="matchPic" src="https://via.placeholder.com/400x400" alt="pic-not-found">
+                </div>
 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Handling how data sent to server -->
     <script type="text/javascript">
-        // Chosen CSS
-        var currentnums = [];
-        var numbers2 = ["11", "12", "13", "14", "15", "21", "22", "23", "24", "25", "31", "32", "33", "34", "35", "41", "42", "43", "44", "45", "51", "52", "53", "54", "55", "61", "62", "63", "64", "65", "71", "72", "73", "74", "75", "81", "82", "83", "84", "85", "91", "92", "93", "94", "95", "101", "102", "103", "104", "105"]
-        function getValues() {
-            currentnums = [];
-            for (var i = 0; i < numbers2.length; i++) {
-                num = numbers2[i];
-                element = $("#" + num).hasClass("active");
-                if (element) {
-                    var myString = $("#" + num).attr("id")
-                    var lastChar = myString[myString.length - 1];
-                    currentnums.push(Number(lastChar));
-                }
-            }
-        }
-       
-        // Capture the form inputs
-        $("#submit").on("click", function (event) {
-            console.log("clicked")
-            getValues()
-            event.preventDefault();
-            // Form validation
+        // Takes in form information
+        $("#submit").on("click", function () {
+            // Validates form
             function validateForm() {
                 var isValid = true;
-                $(".form-control").each(function () {
-                    if ($(this).val() === "") {
+                $('.form-control').each(function () {
+                    if ($(this).val() === '')
                         isValid = false;
-                    }
                 });
-                $(".chosen-select").each(function () {
-                    if ($(this).val() === "") {
-                        isValid = false;
-                    }
-                });
+                $('.chosen-one').each(function () {
+                    if ($(this).val() === "")
+                        isValid = false
+                })
                 return isValid;
             }
             // If all required fields are filled
-            if (validateForm()) {
-                // Create an object for the user"s data
+            if (validateForm() == true) {
+                // Create new record with user data
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
-                    scores: currentnums
-                };
-                // AJAX post the data to the friends API.
-                $.post("/app/friends", userData, function (data) {
-                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                    $("#match-name").text(data.name);
-                    $("#match-img").attr("src", data.photo);
-                    // Show the modal with the best match
-                    $("#results-modal").modal("toggle");
+                    scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(), 
+                    $("#q6").val(), 
+                    $("#q7").val(), 
+                    $("#q8").val(), 
+                    $("#q9").val(), 
+                    $("#q10").val()
+                ]
+                }
+                // Grab the URL of the website
+                var currentURL = window.location.origin;
+                // POST the data to the friends API. 
+                $.post(currentURL + "/api/friends", userData, function (data) {
+                    // Display best match
+                    $("#matchName").text(data.name);
+                    $('#matchPic').attr("src", data.photo);
+                    $("#resultsModal").modal('toggle');
                 });
             } else {
-                alert("Please fill out all fields before submitting!");
+                alert("Please complete entire form before submitting!");
             }
+            return false;
         });
     </script>
-
 </body>
 
 </html>
